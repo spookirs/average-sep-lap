@@ -65,7 +65,6 @@ public class AvgSepLapPlugin extends Plugin
 	{
 		if (event.getType() == ChatMessageType.GAMEMESSAGE)
 		{
-			System.out.println("Type: " + event.getType() + " | Message: " + event.getMessage());
 			Matcher matcher = LAP_TIME_PATTERN.matcher(event.getMessage());
 			if (matcher.find())
 			{
@@ -78,8 +77,6 @@ public class AvgSepLapPlugin extends Plugin
 				lapTimes.add(lapTime);
 				totalLapTime += lapTime;
 
-				// Optional: Log or debug output
-				System.out.println("Lap time added: " + lapTime + " seconds.");
 			}
 		}
 	}
@@ -105,8 +102,6 @@ public class AvgSepLapPlugin extends Plugin
 		lapTimes.clear();
 		totalLapTime = 0;
 
-		// Notify the user
-		System.out.println("Lap data reset via Mysterious Stranger!");
 		client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Lap data has been reset!", null);
 	}
 
