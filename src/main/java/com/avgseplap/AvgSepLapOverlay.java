@@ -11,7 +11,9 @@ import java.awt.*;
 
 public class AvgSepLapOverlay extends Overlay
 {
+    @Inject
     private AvgSepLapConfig config;
+
     private final AvgSepLapPlugin plugin;
 
     @Inject
